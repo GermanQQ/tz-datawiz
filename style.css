@@ -36,9 +36,10 @@ ul{
     padding: 0;
 }
 .wrapper-content{
+    width: 100%;
     max-width: 600px;
-    width: 100vw;
     height: 100vh;
+    padding: 0 15px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -77,6 +78,7 @@ ul{
     transition: 0.2s linear all;
 }
 .box-item{
+    width: 100%;
     margin-top: 20px;
 }
 .list{

@@ -103,7 +103,7 @@ function diplayInfo(){
     let diplayInfo = '';
     productArr.forEach( el => {
         diplayInfo += `
-        <li class="list-item">Штрихкод: 
+        <li class="list-item">Штрих-код: 
         </br> <span class="code">${el.list}</span> 
         </br> <span class="product">${el.description}</span>
         </li>
