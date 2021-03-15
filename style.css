@@ -1,0 +1,112 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+body{
+    overflow-x: hidden;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.wrapper-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px;
+}
+.input-box{
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    transition: 0.3s linear all;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    transform: translateX(-500px);
+}
+.titlePopup{
+    color: #353535;
+}
+.inputCode{
+    border: 1px solid #d1cfcf;
+    height: 25px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 5px;
+    transition: 0.2s linear all;
+}
+.inputDescription{
+    border: 1px solid #d1cfcf;
+    height: 25px;
+    padding: 5px;
+    font-size: 14px;
+    transition: 0.2s linear all;
+}
+.list-item{
+    margin-bottom: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.code{
+    font-size: 16px;
+    font-weight: 400;
+}
+.product{
+    font-size: 16px;
+    font-weight: 400;
+}
+.addButton{
+    margin-top: 10px;
+    
+    padding: 3px;
+    font-size: 16px;
+    color:#000000;
+    background-color: #b9b9b9;
+    opacity: 0.5;
+    
+}
+.popupButton{
+    background-image: url(add.svg);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 20px;
+    transition: 0.2s linear opacity;
+    background-color: #ffffff;
+}
+.popupButton:hover{
+    opacity: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
