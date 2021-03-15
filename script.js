@@ -2,7 +2,9 @@ let list = document.querySelector('.list');
 
 let addButon = document.querySelector('.addButton');
 
-let popupButton = document.querySelector('.popupButton')
+let popupButton = document.querySelector('.popupButton');
+
+let closeButton = document.querySelector('.close');
 
 let inputCode = document.querySelector('.inputCode');
 
@@ -19,8 +21,12 @@ if(localStorage.getItem('code')){
     diplayInfo();
 }
 
+closeButton.addEventListener('click', function(){
+    document.querySelector('.input-box').style.top = '-150%';
+})
+
 popupButton.addEventListener('click', function(){
-    document.querySelector('.input-box').style.transform = 'translateX(0)';
+    document.querySelector('.input-box').style.top = '50%';
 })
 
 //Сорі, тут треба було поіншому вирішити цю таску, але мені тільки так прийшло в голову

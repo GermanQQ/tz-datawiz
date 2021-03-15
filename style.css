@@ -17,8 +17,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 body{
     overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+.SingIn{
+    margin-bottom: 20px;
+    color: #353535;
+    font-size: 24px;
 }
 .wrap{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,12 +36,14 @@ ul{
     padding: 0;
 }
 .wrapper-content{
+    max-width: 600px;
     width: 100vw;
     height: 100vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 15px;
+    position: relative;
 }
 .input-box{
     padding: 25px;
@@ -44,9 +53,9 @@ ul{
     background-color: #f2f2f2;
     transition: 0.3s linear all;
     position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    transform: translateX(-500px);
+    top:-150%;
+    left:50%;
+    transform:translate(-50%, -50%);
 }
 .titlePopup{
     color: #353535;
@@ -66,7 +75,20 @@ ul{
     font-size: 14px;
     transition: 0.2s linear all;
 }
+.box-item{
+    margin-top: 20px;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 580px;
+}
 .list-item{
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #afa6a6;
     margin-bottom: 15px;
     line-height: 20px;
     font-weight: 600;
@@ -102,6 +124,21 @@ ul{
     background-color: #ffffff;
 }
 .popupButton:hover{
+    opacity: 1;
+}
+
+
+.close{
+    align-self: flex-end;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    background-color: #f2f2f2;
+    background-image: url(close.svg);
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.close:hover{
     opacity: 1;
 }
 
