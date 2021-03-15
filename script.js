@@ -14,7 +14,17 @@ let code = document.querySelector('.code');
 
 let product = document.querySelector('.product');
 
+let cleanButton = document.querySelector('.cleanButton');
+
 let productArr = [];
+
+// let con = confirm("Видалити всі товари?")
+
+// console.log(con)
+
+
+
+
 
 if(localStorage.getItem('code')){
     productArr = JSON.parse(localStorage.getItem('code'));
@@ -23,6 +33,14 @@ if(localStorage.getItem('code')){
 
 closeButton.addEventListener('click', function(){
     document.querySelector('.input-box').style.top = '-150%';
+})
+
+cleanButton.addEventListener('click', function(){
+    let con = confirm("Видалити всі товари?");
+    if(con) {
+        localStorage.clear();
+        document.location.reload();
+    }
 })
 
 popupButton.addEventListener('click', function(){
@@ -35,7 +53,7 @@ inputCode.addEventListener('input', function(){
 
         inputCode.style.borderColor="#000000";
         
-        if(inputDescription.value.length > 3){
+        if(inputDescription.value.length > 2){
            addButon.disabled = false; 
            addButon.style.opacity = '1';
         }
@@ -49,7 +67,7 @@ inputCode.addEventListener('input', function(){
 })
 
 inputDescription.addEventListener('input', function(){
-    if(inputDescription.value.length > 3 && inputCode.value.length > 7) {
+    if(inputDescription.value.length > 2 && inputCode.value.length > 7) {
         addButon.disabled = false;
         addButon.style.opacity = '1';
         inputDescription.style.borderColor="#000000";
@@ -77,7 +95,7 @@ addButon.addEventListener('click' , function(){
     addButon.style.opacity = '0.5';
     inputCode.style.borderColor="#d1cfcf";
     addButon.disabled = true;
-    document.querySelector('.input-box').style.transform = 'translateX(-500px)';
+    document.querySelector('.input-box').style.top = '-150%';
 })
 
 function diplayInfo(){
