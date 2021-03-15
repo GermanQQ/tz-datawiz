@@ -31,9 +31,6 @@ if(localStorage.getItem('code')){
     diplayInfo();
 }
 
-closeButton.addEventListener('click', function(){
-    document.querySelector('.input-box').style.top = '-150%';
-})
 
 cleanButton.addEventListener('click', function(){
     let con = confirm("Видалити всі товари?");
@@ -45,6 +42,10 @@ cleanButton.addEventListener('click', function(){
 
 popupButton.addEventListener('click', function(){
     document.querySelector('.input-box').style.top = '50%';
+})
+
+closeButton.addEventListener('click', function(){
+    document.querySelector('.input-box').style.top = '-150%';
 })
 
 //Сорі, тут треба було поіншому вирішити цю таску, але мені тільки так прийшло в голову
