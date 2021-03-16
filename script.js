@@ -18,12 +18,6 @@ let cleanButton = document.querySelector('.cleanButton');
 
 let productArr = [];
 
-// let con = confirm("Видалити всі товари?")
-
-// console.log(con)
-
-
-
 
 
 if(localStorage.getItem('code')){
@@ -88,6 +82,7 @@ addButon.addEventListener('click' , function(){
     };
 
     productArr.push(arrList);
+
     diplayInfo();
     localStorage.setItem('code', JSON.stringify(productArr));
     inputCode.value = '';
